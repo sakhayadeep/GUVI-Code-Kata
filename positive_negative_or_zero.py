@@ -1,12 +1,12 @@
 class Number:
     def __init__(self, num = 0):
-        if(type(num) == type(int())):
+        if(type(num) == type(int()) or type(num) == type(float())):
             self.num = num
         else:
             raise ValueError("Expected a int, {} given.".format(type(num)))
 
     def set_number(self, num = 0):
-        if(type(num) == type(int())):
+        if(type(num) == type(int()) or type(num) == type(float())):
             self.num = num
         else:
             raise ValueError("Expected a int, {} given.".format(type(num)))
