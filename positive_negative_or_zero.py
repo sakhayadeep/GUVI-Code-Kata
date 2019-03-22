@@ -22,7 +22,10 @@ class Number:
 def main():
     my_num = Number()
 
-    my_num.set_number(int(input()))
+    try:
+        my_num.set_number(int(input()))
+    except:
+        print("Invalid Input")
 
     print(my_num.check_number())
 
