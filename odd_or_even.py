@@ -1,23 +1,21 @@
 class Number:
     def __init__(self, num = 0):
-        if(type(num) == type(int()) or type(num) == type(float())):
+        if((type(num) == type(int()) or type(num) == type(float())) and num >= 0):
             self.num = num
         else:
             raise ValueError("Expected a int, {} given.".format(type(num)))
 
     def set_number(self, num = 0):
-        if(type(num) == type(int()) or type(num) == type(float())):
+        if((type(num) == type(int()) or type(num) == type(float())) and num >= 0):
             self.num = num
         else:
             raise ValueError("Expected a int, {} given.".format(type(num)))
 
     def check_number(self):
-        if(self.num > 0):
-            return "Positive"
-        elif(self.num < 0):
-            return "Negative"
+        if(self.num % 2 == 0):
+            return "Even"
         else:
-            return "Zero"
+            return "Odd"
 
 def main():
     my_num = Number()
