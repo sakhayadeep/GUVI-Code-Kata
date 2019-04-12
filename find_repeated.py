@@ -15,5 +15,8 @@ for i in d:
     if(d[i] > 1):
         x2.append(i)
 
-x2.sort()
-print(*x2)
+if(len(x2)>0):
+    x2.sort()
+    print(*x2)
+else:
+    print('unique')
