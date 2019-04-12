@@ -8,9 +8,14 @@ OUTPUT
 """
 def convert(s1, s2):
     cost = 0
+    n1 = len(s1)
+    n2 = len(s2)
+    
+    ################ part 1 ######################
     if(s1 == s2):
         return cost
 
+    ################ part 2 ######################
     s1,s2 = list(s1),list(s2)
     
     while(s1[0] != s2[0]):
@@ -30,7 +35,12 @@ def convert(s1, s2):
     for i in s2:
         if(i not in s1):
             cost += 1
-
+    
+    ################ part 3 ######################
+    if((n1 > n2) and (cost == 0)):
+        cost = n1 - n2 
+    
+    ##############################################
     return cost
 
 X,Y = input().split()
