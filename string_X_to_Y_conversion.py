@@ -33,4 +33,5 @@ def convert(s1, s2):
 
     return cost
 
-print(convert("ball", "baloon"))
+X,Y = input().split()
+print(convert(X, Y))
