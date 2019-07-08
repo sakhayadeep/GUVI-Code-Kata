@@ -1,17 +1,15 @@
-def calculate(a):
-    if(a == 0):
-        return 0
-    else:
-        return a+calculate(a-1)
+def find_sum(arr, a):
+    S2 = 0
+    for i in arr:
+        if(i < a):
+            S2 += i
 
-def fib_sum(a):
-    return calculate(a)-a
+    return S2
 
 N = int(input())
 arr = list(map(int, input().split()))
 S = 0
-
-for i in arr:
-    S += fib_sum(i)
+for i in range(N):
+    S += find_sum(arr[:i+1], arr[i])
 
 print(S)
